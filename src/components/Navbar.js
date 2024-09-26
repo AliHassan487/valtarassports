@@ -9,53 +9,54 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const cartItems = useSelector((state) => state.cart.items);
-  return (
-    <AppBar position="static" style={{ backgroundColor: '#0d47a1' }}>
-      <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {/* Logo and Company Name */}
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: 'white', display: 'flex', alignItems: 'center' }}>
-            {/* <img src={logo} alt="Company Logo" style={{ width: '40px', marginRight: '10px' }} /> */}
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Valtaras Sports
-            </Typography>
-          </Link>
-        </div>
+  
+    return (
+        <AppBar position="static" style={{ backgroundColor: 'black' }}>
+            <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
+                {/* Logo and Company Name */}
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <Link to="/" style={{ textDecoration: 'none', color: 'white', display: 'flex', alignItems: 'center' }}>
+                        {/* <img src={logo} alt="Company Logo" style={{ width: '40px', marginRight: '10px' }} /> */}
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                            Valtaras Sports
+                        </Typography>
+                    </Link>
+                </div>
 
-        {/* Navigation Links */}
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Link to="/" style={{ color: 'white', textDecoration: 'none', marginRight: '20px' }}>
-            <Button color="inherit">Home</Button>
-          </Link>
-          <Link to="/shop" style={{ color: 'white', textDecoration: 'none', marginRight: '20px' }}>
-            <Button color="inherit">Shop</Button>
-          </Link>
-          <Link to="/deals" style={{ color: 'white', textDecoration: 'none', marginRight: '20px' }}>
-            <Button color="inherit">Deals</Button>
-          </Link>
-        </div>
+                {/* Navigation Links */}
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <Link to="/" style={{ color: 'white', textDecoration: 'none', marginRight: '20px' }}>
+                        <Button color="inherit">Home</Button>
+                    </Link>
+                    <Link to="/shop" style={{ color: 'white', textDecoration: 'none', marginRight: '20px' }}>
+                        <Button color="inherit">Shop</Button>
+                    </Link>
+                    <Link to="/deals" style={{ color: 'white', textDecoration: 'none', marginRight: '20px' }}>
+                        <Button color="inherit">Deals</Button>
+                    </Link>
+                </div>
 
-        {/* Icons for Cart, Search, and Profile */}
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <IconButton size="large" color="inherit">
-            <SearchIcon />
-          </IconButton>
-          <Link to="/cart" style={{ color: 'white', textDecoration: 'none' }}>
-            <IconButton size="large" color="inherit">
-              <Badge badgeContent={cartItems.length} color="error">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-          </Link>
-          <Link to="/profile" style={{ color: 'white', textDecoration: 'none' }}>
-            <IconButton size="large" color="inherit">
-              <AccountCircleIcon />
-            </IconButton>
-          </Link>
-        </div>
-      </Toolbar>
-    </AppBar>
-  );
+                {/* Icons for Cart, Search, and Profile */}
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <IconButton size="large" color="inherit">
+                        <SearchIcon />
+                    </IconButton>
+                    <Link to="/cart" style={{ color: 'white', textDecoration: 'none' }}>
+                        <IconButton size="large" color="inherit">
+                            <Badge badgeContent={cartItems.length} color="error">
+                                <ShoppingCartIcon />
+                            </Badge>
+                        </IconButton>
+                    </Link>
+                    <Link to="/profile" style={{ color: 'white', textDecoration: 'none' }}>
+                        <IconButton size="large" color="inherit">
+                            <AccountCircleIcon />
+                        </IconButton>
+                    </Link>
+                </div>
+            </Toolbar>
+        </AppBar>
+    );
 };
 
 export default Navbar;
