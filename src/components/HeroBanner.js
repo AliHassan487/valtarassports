@@ -9,7 +9,7 @@ const HeroBanner = () => {
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
             <Typography variant="h3" component="h1" style={styles.heroTitle}>
-              Welcome to MyShop
+              Welcome to Valtaras Sports
             </Typography>
             <Typography variant="h6" component="p" style={styles.heroDescription}>
               Explore the best products, offers, and deals from the comfort of your home.

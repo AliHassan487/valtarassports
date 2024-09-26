@@ -12,7 +12,7 @@ const ContactUs = () => {
           We're here to help! Contact us via email or phone, or follow us on social media.
         </Typography>
         <div style={styles.contactInfo}>
-          <Typography>Email: support@myshop.com</Typography>
+          <Typography>Email: support@valtarassports.com</Typography>
           <Typography>Phone: +1 (234) 567-890</Typography>
         </div>
       </Container>

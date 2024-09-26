@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
+import { useSelector } from 'react-redux';
 // import logo from '../assets/logo.png'; 
 
 const Navbar = () => {
+    const cartItems = useSelector((state) => state.cart.items);
   return (
     <AppBar position="static" style={{ backgroundColor: '#0d47a1' }}>
       <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -15,7 +17,7 @@ const Navbar = () => {
           <Link to="/" style={{ textDecoration: 'none', color: 'white', display: 'flex', alignItems: 'center' }}>
             {/* <img src={logo} alt="Company Logo" style={{ width: '40px', marginRight: '10px' }} /> */}
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              MyShop
+              Valtaras Sports
             </Typography>
           </Link>
         </div>
@@ -40,7 +42,7 @@ const Navbar = () => {
           </IconButton>
           <Link to="/cart" style={{ color: 'white', textDecoration: 'none' }}>
             <IconButton size="large" color="inherit">
-              <Badge badgeContent={2} color="error">
+              <Badge badgeContent={cartItems.length} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
